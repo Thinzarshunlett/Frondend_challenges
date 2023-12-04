@@ -4,6 +4,9 @@ export default {
   "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {},
+    colors:{
+      'almost-white': 'hsl(0, 0%, 98%)',
+    }
   },
   plugins: [
     require('flowbite/plugin')

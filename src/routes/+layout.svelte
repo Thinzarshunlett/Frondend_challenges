@@ -7,7 +7,8 @@
     import close from "$lib/images/icon-close-menu.svg";
     import down from "$lib/images/icon-arrow-down.svg";
     import { Button, Dropdown, DropdownItem} from 'flowbite-svelte';
-
+    import { fade } from 'svelte/transition';
+    let visible = true;
     let isButtonVisible = true;
     let isNavBarVisible = false;
 
@@ -17,8 +18,8 @@ function toggleNavBar() {
 }
   
   </script>
-  <div class="bg-white p-5">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 mb-2 mx-3">
+  <div class="bg-almost-white p-5">
+    <nav class="bg-almost-white border-gray-200 dark:bg-gray-900 mb-2 mx-3">
         <div class="flex items-center">
             
                 <a href="" class="">
@@ -33,7 +34,7 @@ function toggleNavBar() {
                 </button>
                 
                 {#if isNavBarVisible}
-                <div class="absolute top-0 right-0 bg-white transform transition-transform ease-in-out duration-300 overflow-y-auto h-screen w-2/3" >
+                <div class="absolute top-0 right-0 bg-almost-white transform transition-transform ease-in-out duration-300 overflow-y-auto h-screen w-2/3" >
                   
                   <ul class="mt-7">
                     <li class="text-right ">
@@ -89,13 +90,13 @@ function toggleNavBar() {
                     </button>
                 </li>
                 <li class="text-center">
-                    <button class=" py-2.5 px-5  text-sm font-medium text-gray-500 bg-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
+                    <button class=" py-2.5 px-5  text-sm font-medium text-gray-500  rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
                         Login
                     </button>
                    
                 </li>
                 <li  class="text-center">
-                    <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
+                    <button class="py-2.5 px-5  text-sm font-medium text-gray-500  rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
                         Register
                     </button>
                 </li>
@@ -104,12 +105,13 @@ function toggleNavBar() {
                 {:else}
           
                 <div class="hidden w-full md:block md:w-auto" >
-                    <ul class="mx-5 font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul class="mx-5 font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg bg-almost-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-almost-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
+                            
                             <Button class="text-black focus:ring-0 text-gray-500 ">
                                 features <img src={down} alt="" class="ms-4">
                             </Button>
-                            <Dropdown>
+                            <Dropdown >
                                 <DropdownItem>
                                     <div class="flex">
                                         <img src={todo} alt="" class="mx-2"> Todo List
@@ -135,7 +137,7 @@ function toggleNavBar() {
                         </li>
                        
                     <li>
-                        <Button class="text-black focus:ring-0 text-gray-500 ">
+                        <Button class="text-black  focus:ring-0 text-gray-500 ">
                             Company <img src={down} alt="" class="ms-4">
                         </Button>
                         <Dropdown>
@@ -159,11 +161,11 @@ function toggleNavBar() {
                 
                 </div>
                 {/if}
-            <div class="ml-auto hidden w-full md:block md:w-auto">
-                <button class="mx-3 py-2.5 px-5  text-sm font-medium text-gray-500 bg-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
+            <div class="ml-auto hidden w-full lg:block md:block md:w-auto lg:w-auto">
+                <button class="mx-3 py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
                     Login
                 </button>
-                <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
+                <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
                     Register
                 </button>
             </div>
