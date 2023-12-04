@@ -1,0 +1,129 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "imports": [
+      "_internal.js"
+    ],
+    "isEntry": true,
+    "src": ".svelte-kit/generated/server/internal.js"
+  },
+  "_index.js": {
+    "file": "chunks/index.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_ssr.js": {
+    "file": "chunks/ssr.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "imports": [
+      "_internal.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js"
+  },
+  "src/lib/images/client-audiophile.svg": {
+    "file": "_app/immutable/assets/client-audiophile.cdc1075f.svg",
+    "src": "src/lib/images/client-audiophile.svg"
+  },
+  "src/lib/images/client-databiz.svg": {
+    "file": "_app/immutable/assets/client-databiz.3098feb2.svg",
+    "src": "src/lib/images/client-databiz.svg"
+  },
+  "src/lib/images/client-maker.svg": {
+    "file": "_app/immutable/assets/client-maker.a770212d.svg",
+    "src": "src/lib/images/client-maker.svg"
+  },
+  "src/lib/images/client-meet.svg": {
+    "file": "_app/immutable/assets/client-meet.1cf19dba.svg",
+    "src": "src/lib/images/client-meet.svg"
+  },
+  "src/lib/images/icon-arrow-down.svg": {
+    "file": "_app/immutable/assets/icon-arrow-down.ebad99bf.svg",
+    "src": "src/lib/images/icon-arrow-down.svg"
+  },
+  "src/lib/images/icon-calendar.svg": {
+    "file": "_app/immutable/assets/icon-calendar.b34d000b.svg",
+    "src": "src/lib/images/icon-calendar.svg"
+  },
+  "src/lib/images/icon-close-menu.svg": {
+    "file": "_app/immutable/assets/icon-close-menu.9e723834.svg",
+    "src": "src/lib/images/icon-close-menu.svg"
+  },
+  "src/lib/images/icon-planning.svg": {
+    "file": "_app/immutable/assets/icon-planning.09cf89e5.svg",
+    "src": "src/lib/images/icon-planning.svg"
+  },
+  "src/lib/images/icon-reminders.svg": {
+    "file": "_app/immutable/assets/icon-reminders.a5569ebc.svg",
+    "src": "src/lib/images/icon-reminders.svg"
+  },
+  "src/lib/images/icon-todo.svg": {
+    "file": "_app/immutable/assets/icon-todo.95927352.svg",
+    "src": "src/lib/images/icon-todo.svg"
+  },
+  "src/lib/images/image-hero-desktop.png": {
+    "file": "_app/immutable/assets/image-hero-desktop.3bda6511.png",
+    "src": "src/lib/images/image-hero-desktop.png"
+  },
+  "src/lib/images/image-hero-mobile.png": {
+    "file": "_app/immutable/assets/image-hero-mobile.b9d32923.png",
+    "src": "src/lib/images/image-hero-mobile.png"
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout.463f8af0.css",
+    "src": "src/routes/+layout.css"
+  },
+  "src/routes/+layout.svelte": {
+    "assets": [
+      "_app/immutable/assets/icon-todo.95927352.svg",
+      "_app/immutable/assets/icon-calendar.b34d000b.svg",
+      "_app/immutable/assets/icon-reminders.a5569ebc.svg",
+      "_app/immutable/assets/icon-planning.09cf89e5.svg",
+      "_app/immutable/assets/icon-arrow-down.ebad99bf.svg"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout.463f8af0.css"
+    ],
+    "file": "entries/pages/_layout.svelte.js",
+    "imports": [
+      "_ssr.js",
+      "_index.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+layout.svelte"
+  },
+  "src/routes/+page.svelte": {
+    "assets": [
+      "_app/immutable/assets/image-hero-desktop.3bda6511.png",
+      "_app/immutable/assets/client-databiz.3098feb2.svg",
+      "_app/immutable/assets/client-audiophile.cdc1075f.svg",
+      "_app/immutable/assets/client-meet.1cf19dba.svg",
+      "_app/immutable/assets/client-maker.a770212d.svg",
+      "_app/immutable/assets/image-hero-mobile.b9d32923.png"
+    ],
+    "file": "entries/pages/_page.svelte.js",
+    "imports": [
+      "_ssr.js"
+    ],
+    "isEntry": true,
+    "src": "src/routes/+page.svelte"
+  }
+}
