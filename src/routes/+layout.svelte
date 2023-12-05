@@ -7,8 +7,17 @@
     import close from "$lib/images/icon-close-menu.svg";
     import down from "$lib/images/icon-arrow-down.svg";
     import { Button, Dropdown, DropdownItem} from 'flowbite-svelte';
-    import { fade } from 'svelte/transition';
-    let visible = true;
+    import { slide,fade } from 'svelte/transition';
+    let isExpanded = false
+
+	function clickHandler() {
+		isExpanded = !isExpanded
+	}
+    let isExpanded1 = false
+
+	function clickHandler1() {
+		isExpanded1 = !isExpanded1
+	}
     let isButtonVisible = true;
     let isNavBarVisible = false;
 
@@ -105,53 +114,60 @@ function toggleNavBar() {
                 {:else}
           
                 <div class="hidden w-full md:block md:w-auto" >
-                    <ul class="mx-5 font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg bg-almost-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-almost-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                        <li>
+                    <ul class="mx-7 font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg bg-almost-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-almost-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                        <li class="my-auto">
                             
-                            <Button  class="text-black focus:ring-0  text-gray-500 ">
-                                features <img src={down} alt="" class="ms-4">
-                            </Button>
-                            <Dropdown >
-                                <DropdownItem>
-                                    <div class="flex">
-                                        <img src={todo} alt="" class="mx-2"> Todo List
-                                    </div>
-                                </DropdownItem>
-                                <DropdownItem>
-                                    <div class="flex">
-                                        <img src={calendar} alt="" class="mx-2"> Calendar
-                                    </div>
-                                </DropdownItem>
-                                <DropdownItem>
-                                    <div class="flex">
-                                        <img src={remainder} alt="" class="mx-2"> Reminders
-                                    </div>
-                                </DropdownItem>
-                                <DropdownItem>
-                                    <div class="flex">
-                                        <img src={planning} alt="" class="mx-2"> Planning
-                                    </div>
-                                </DropdownItem>
-                            </Dropdown>
-                            
+                            <button on:click={clickHandler} class="hover:text-black flex focus:ring-0 text-sm  text-gray-500 ">
+                                features <img src={down} alt="" class="ms-3 my-auto">
+                            </button>
+                            {#if isExpanded}
+                            <div class="bg-white  relative" transition:fade={{ delay: 150, duration: 300 }} >
+                                <ul class="absolute top-0 -left-12 rounded my-2 w-32 h-38 text-sm shadow-lg" >
+                                    <li class="my-4 ">
+                                        <div class="flex justify-center text-gray-600 ">
+                                            <img src={todo} alt="" class="me-5"> <p>Todo List</p>
+                                        </div>
+                                    </li>
+                                    <li class="my-4">
+                                        <div class="flex justify-center text-gray-600">
+                                            <img src={calendar} alt="" class="me-5"> <p>Calendar</p>
+                                        </div>
+                                    </li>
+                                    <li class="my-4">
+                                        <div class="flex justify-center text-gray-600">
+                                            <img src={remainder} alt="" class="me-5"> <p>Reminders</p>
+                                        </div>
+                                    </li>
+                                    <li class="my-4">
+                                        <div class="flex justify-center text-gray-600">
+                                            <img src={planning} alt="" class="me-5"> <p>Planning</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/if}
                         </li>
                        
-                    <li>
-                        <Button class="text-black  focus:ring-0 text-gray-500 ">
-                            Company <img src={down} alt="" class="ms-4">
-                        </Button>
-                        <Dropdown>
-                            <DropdownItem>History</DropdownItem>
-                            <DropdownItem>Our Team</DropdownItem>
-                            <DropdownItem>Blog</DropdownItem>
-                        </Dropdown>
+                    <li class="my-auto">
+                        <button on:click={clickHandler1} class="hover:text-black text-sm flex focus:ring-0  text-gray-500 ">
+                            Company <img src={down} alt="" class="ms-3 my-auto ">
+                        </button>
+                        {#if isExpanded1}
+                        <div class="bg-white  relative" transition:fade={{ delay: 150, duration: 300 }} >
+                            <ul class="absolute text-sm rounded top-0 -left-2 my-2 w-24 h-38 shadow-lg text-center text-gray-600">
+                                <li class="my-3">History</li>
+                                <li class="my-3">Our Team</li>
+                                <li class="my-3">Blog</li>
+                            </ul>
+                        </div>
+                        {/if}
                     </li>
-                    <li class="my-auto  text-gray-500 text-sm">
+                    <li class="my-auto hover:text-black text-gray-500 text-sm">
                         <a href="" class=" ">
                             Careers
                         </a>
                     </li>
-                    <li class="my-auto  text-gray-500 text-sm">
+                    <li class="my-auto hover:text-black text-gray-500 text-sm">
                         <a href="" class="mx-5">
                             About
                         </a>
@@ -162,10 +178,10 @@ function toggleNavBar() {
                 </div>
                 {/if}
             <div class="ml-auto hidden w-full lg:block md:block md:w-auto lg:w-auto">
-                <button class="mx-3 py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 transition ease-in delay-100 duration-200">
+                <button class="mx-3 py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 transition ease-out delay-100 duration-100">
                     Login
                 </button>
-                <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none border border-gray-500 hover:border hover:border-gray-500 transition ease-out delay-150 duration-300">
+                <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none border border-gray-500 hover:border hover:border-gray-500 transition ease-out delay-100 duration-150">
                     Register
                 </button>
             </div>
