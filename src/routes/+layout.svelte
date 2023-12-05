@@ -18,7 +18,7 @@ function toggleNavBar() {
 }
   
   </script>
-  <div class="bg-almost-white p-5 h-screen">
+  <div class="bg-almost-white p-5 md:h-screen ">
     <nav class="bg-almost-white border-gray-200 dark:bg-gray-900 mb-2 mx-3 sticky top-0">
         <div class="flex items-center">
             
@@ -34,7 +34,7 @@ function toggleNavBar() {
                 </button>
                 
                 {#if isNavBarVisible}
-                <div class="absolute top-0 right-0 bg-almost-white transform transition-transform ease-in-out duration-300 overflow-y-auto h-screen w-2/3" >
+                <div class="absolute -top-5 -right-5 bg-white transform transition-transform ease-in-out duration-300 overflow-y-auto h-screen w-2/3" >
                   
                   <ul class="mt-7">
                     <li class="text-right ">
