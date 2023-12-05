@@ -6,7 +6,7 @@
     import maker from '$lib/images/client-maker.svg';
     import mobile from '$lib/images/image-hero-mobile.png';
 </script>
-<div class="flex flex-col-reverse md:px-10 lg:px-32 lg:mt-16 md:flex-row bg-almost-white">
+<div class="flex flex-col-reverse md:px-10 md:my-32 lg:px-32 lg:mt-16 md:flex-row bg-almost-white">
     <div class="self-end  mt-16 text-center md:text-left ">
         <h1 class="font-bold text-5xl  text-center md:text-left md:font-bold lg:text-7xl md:text-4xl">Make remote work</h1>
         <p class="lg:my-14 md:my-9 my-8 text-lg font-semibold text-gray-500">Get your team in sync, no matter your location. Streamline processes, create team rituals and watch productivity soar.</p>
