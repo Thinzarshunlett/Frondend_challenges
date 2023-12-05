@@ -19,7 +19,7 @@ function toggleNavBar() {
   
   </script>
   <div class="bg-almost-white p-5">
-    <nav class="bg-almost-white border-gray-200 dark:bg-gray-900 mb-2 mx-3">
+    <nav class="bg-almost-white border-gray-200 dark:bg-gray-900 mb-2 mx-3 sticky top-0">
         <div class="flex items-center">
             
                 <a href="" class="">
@@ -108,7 +108,7 @@ function toggleNavBar() {
                     <ul class="mx-5 font-medium flex flex-col p-4 md:p-0 mt-4 border  rounded-lg bg-almost-white md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-almost-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
                             
-                            <Button class="text-black focus:ring-0 text-gray-500 ">
+                            <Button  class="text-black focus:ring-0  text-gray-500 ">
                                 features <img src={down} alt="" class="ms-4">
                             </Button>
                             <Dropdown >
@@ -162,10 +162,10 @@ function toggleNavBar() {
                 </div>
                 {/if}
             <div class="ml-auto hidden w-full lg:block md:block md:w-auto lg:w-auto">
-                <button class="mx-3 py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
+                <button class="mx-3 py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 transition ease-in delay-100 duration-200">
                     Login
                 </button>
-                <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none hover:border hover:border-gray-500 ">
+                <button class="py-2.5 px-5  text-sm font-medium text-gray-500 bg-almost-white rounded-lg focus:outline-none border border-gray-500 hover:border hover:border-gray-500 transition ease-out delay-150 duration-300">
                     Register
                 </button>
             </div>
