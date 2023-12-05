@@ -18,7 +18,7 @@ function toggleNavBar() {
 }
   
   </script>
-  <div class="bg-almost-white p-5">
+  <div class="bg-almost-white p-5 h-screen">
     <nav class="bg-almost-white border-gray-200 dark:bg-gray-900 mb-2 mx-3 sticky top-0">
         <div class="flex items-center">
             
